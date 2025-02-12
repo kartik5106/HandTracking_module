@@ -1,8 +1,11 @@
 import cv2
 import mediapipe as mp
 import time
+import os
 
-cap = cv2.VideoCapture(1)
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
+cap = cv2.VideoCapture(0)
 
 mpHands = mp.solutions.hands
 hands = mpHands.Hands()
